@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es">
+	
+<head>
+	<link rel="manifest" href="webmanifest.manifest"> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Joya - Solicitar limpieza - Paso 1</title>
+	<meta name="title" content="Joya - Solicitar limpieza - Paso 1">
+	<meta name="description" content="Lorem ipsum sid dolor amet" />
+
+	<link rel="icon" href="/assets/favicons/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="/assets/favicons/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><!-- 180×180 -->
+	
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+	<link href="/assets/fonts/fontawesome-pro-5.7.2-web/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/dist/style.css">
+
+</head>
+<body class="dev-user-login">
+	<div id="wrapper">
+		<div class="overlay"></div>
+		<header class="fixed-top-scroll fixed-top">
+	        <nav class="navbar">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-auto logo-div">
+	                        <h1 class="site-title">
+	                            <a class="navbar-brand main-logo" href="#" rel="home" style="background-image: url('/img/logo@2x.png');">Joya</a>
+	                        </h1>
+	                    </div>
+	                    <!-- NOTA: sólo uno de los user-navs va a estar presente en el HTML en cada momento, esto será manejado según esté logueado o no el usuario. La técnica de ocultar uno de los menúes con css es únicamente para la maqueta -->
+	                    <div class="col menu-col user-nav">
+	                    	<button class="navbar-toggler user-toggle hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu-user" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                				<span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+						         	<ul class="menu user-menu">
+						         		<li class="username d-lg-none"><span class="a">
+		                        			<i class="far fa-user-circle"></i>
+		                        			Carolina	                        			
+		                        		</span></li>
+		                        		<li class="ayuda"><a href="#">Ayuda</a></li>
+		                        		<li><a href="#" class="destacado">Solicitar limpieza de vidriera</a></li>
+		                        		<li class="separator"></li>
+		                        		<li class="user-item"><a href="#">Tus pedidos</a></li>
+		                        		<li class="user-options dropdown closed">
+		                        			<span class="a user-item">
+		                        				<i class="far fa-user-circle"></i>
+		                        				Carolina
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+		                        	</ul>
+		                        </div>
+		                    </nav>
+	                    </div>
+	                    <div class="col menu-col public-nav">
+	                        <button class="navbar-toggler hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+	                            <span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+	                            	<ul class="menu public-menu">
+	                            		<li><a href="#">Ayuda</a></li>
+	                            		<li><a href="#" class="destacado">Solicitar limpieza de vidriera</a></li>
+	                            		<li class="separator"></li>
+	                            		<li><a href="#" class="destacado">Iniciar sesión</a></li>
+	                            	</ul>
+
+	                            </div>
+	                        </nav>
+	                    </div>
+	                </div>
+	            </div>
+	        </nav>
+	    </header>
+	    <div class="main-content">
+	    	<div class="clean-wizard step1"><!-- La clase step1 en esta línea determina qué se muestra activo abajo -->
+	    		<div class="container-fluid">
+	    			<div class="row">
+	    				<div class="col-12 col-lg-10 wizard-container">
+	    					<div class="wizard-steps">
+	    						<ul class="inner-container">
+	    							<li class="title"><span class="d-none d-md-inline">Tu solicitud:</span><span class="d-md-none">Pasos:</span> </li>
+	    							<li class="step step1"><i class="fal fa-store"></i><span class="d-none d-lg-inline">Detalles del local</span><span class="d-none d-md-inline d-lg-none">El local</span></li>
+	    							<li class="arrow">&rsaquo;</li>
+	    							<li class="step step2"><i class="fal fa-calendar-alt"></i><span class="d-none d-md-inline">Día y hora</span></li>
+	    							<li class="arrow">&rsaquo;</li>
+	    							<li class="step step3"><i class="fal fa-credit-card"></i><span class="d-none d-md-inline">Pago</span></li>
+	    						</ul>
+	    					</div>
+	    					<div class="wizard-content">
+	    						<div class="step1 inner-container">
+	    							<h4>Detalles de Local</h4>
+	    							<p>Seleccioná el local que necesita de nuestro servicio o agregá un local nuevo a tu lista.</p>
+	    							<div class="form">
+		    							<div class="form-element">
+		    								<label for="local" class="form-label">Local</label>
+		    								<select name="local" id="" class="form-select">
+		    									<option value="">Seleccioná un local</option>
+		    									<option value="nuevo">+ Nuevo local</option>
+		    									<option value="local1">Local 1</option>
+		    									<option value="local2">Local 2</option>
+		    								</select>
+		    								<p class="form-text importante">Ya tenés cuenta en Joya? <a href="#" class="link-text">Iniciá sesión.</a></p> 
+										</div>
+
+										<div class="localnuevo block-alternative">
+											<div class="form-element">
+												<label for="direccion" class="form-label">Dirección</label>
+												<div class="input-group">
+													<span class="input-group-text"><i class="far fa-map-marker-alt"></i></span>
+													<input type="text" class="form-control" placeholder="Dirección del local..." name="direccion">
+												</div>
+												<p class="form-text">El servicio sólo aplica a vidrieras en planta baja, de un máximo de 4 metros de altura.</p> 
+												
+											</div>
+											<div class="form-element">
+												<label for="nombre_local" class="form-label">Nombre del local</label>
+												<input type="text" class="form-control" placeholder="Nombre del local..." name="nombre_local">
+											</div>
+											<div class="form-element">
+												<label for="indicaciones" class="form-label">Indicaciones adicionales (opcional)</label>
+												<input type="text" class="form-control" placeholder="Número de local en galería, timbre, etc." name="indicaciones">
+											</div>
+											<div class="ventanas"> 
+												<h4>Tamaño de la vidriera</h4>
+												<p>A continuación especificá el tamaño aproximado de tu vidriera. 
+												<br><strong>El alto y ancho máximo de cada paño de ventana es de 4 metros.</strong></p>
+												<div class="ventana">
+													<h5>Paño #1</h5>
+													<div class="row">
+														<div class="col-sm-8 medidas">
+															<div class="row">
+																<div class="col-auto icon">
+																	<i class="far fa-arrows-v"></i>
+																</div>
+																<div class="col"><input type="range" class="form-range" id="altura1" min="1" max="4" step="0.5" value="2" data-vidriera="1" data-variable="alto"></div>
+																<div class="col-auto">
+																	<div class="input-group">
+																		<input type="text" class="form-control form-aux" name="altura1" data-vidriera="1" data-variable="alto" value="2" />
+																		<span class="input-group-text">m</span>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-auto"><i class="far fa-arrows-h"></i></div>
+																<div class="col">
+																	<input type="range" class="form-range" id="ancho1" min="1" max="4" step="0.5" value="2" data-vidriera="1" data-variable="ancho">
+																</div>
+																<div class="col-auto">
+																	<div class="input-group">
+																		<input type="text" class="form-control form-aux" name="ancho1" data-vidriera="1" data-variable="ancho" value="2" />
+																		<span class="input-group-text">m</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														<div class="col-sm-4 representacion">
+															<div class="vidriera" id="vidriera1" data-maxwidth="4" data-maxheight="4" style="width: 50%; height: 50%;" data-ancho="2" data-alto="2">
+																<p class="value">4m<sup>2</sup></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="ventana">
+													<h5>Paño #2 <a href="#" class="link-text">Eliminar</a></h5>
+													<div class="row">
+														<div class="col-sm-8 medidas">
+															<div class="row">
+																<div class="col-auto icon">
+																	<i class="far fa-arrows-v"></i>
+																</div>
+																<div class="col"><input type="range" class="form-range" id="altura2" min="1" max="4" step="0.5" value="2" data-vidriera="2" data-variable="alto"></div>
+																<div class="col-auto">
+																	<div class="input-group">
+																		<input type="text" class="form-control form-aux" name="altura2" data-vidriera="2" data-variable="alto" value="2" />
+																		<span class="input-group-text">m</span>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-auto"><i class="far fa-arrows-h"></i></div>
+																<div class="col">
+																	<input type="range" class="form-range" id="ancho2" min="1" max="4" step="0.5" value="2" data-vidriera="2" data-variable="ancho">
+																</div>
+																<div class="col-auto">
+																	<div class="input-group">
+																		<input type="text" class="form-control form-aux" name="ancho2" data-vidriera="2" data-variable="ancho" value="2" />
+																		<span class="input-group-text">m</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														<div class="col-sm-4 representacion">
+															<div class="vidriera" id="vidriera2" data-maxwidth="4" data-maxheight="4" style="width: 50%; height: 50%;" data-ancho="2" data-alto="2">
+																<p class="value">4m<sup>2</sup></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="btn-set">
+													<a href="#"  class="link-text">+ Agregar otro paño de ventana</a>
+												</div>
+											</div>
+										</div>
+										<div class="localexistente block-alternative">
+											<div class="form-element">
+												<p class="label">Características</p>
+												<div class="caracteristicas-local">
+													<div class="form-element">
+														<p class="label">Dirección</p>
+														<p class="value">Av. Santa Fe 2702, C1425, CABA</p>
+													</div>
+													<div class="form-element row">
+														<div class="col-md-4 col-xl-3 superficie">
+															<p class="label">Vidriera</p>
+															<p class="value">Sup. aproximada: 64m<sup>2</sup></p>
+														</div>
+														<div class="col-md-8 col-xl-9 panios">
+															<div class="row">
+																<div class="col panio">
+																	<p class="label">Ventana #1</p>
+																	<p class="value">16m<sup>2</sup></p>
+																</div>
+																<div class="col panio">
+																	<p class="label">Ventana #2</p>
+																	<p class="value">8m<sup>2</sup></p>
+																</div>
+																<div class="col panio">
+																	<p class="label">Ventana #3</p>
+																	<p class="value">12m<sup>2</sup></p>
+																</div>
+																<div class="col panio">
+																	<p class="label">Ventana #3</p>
+																	<p class="value">12m<sup>2</sup></p>
+																</div>
+																<div class="col panio">
+																	<p class="label">Ventana #3</p>
+																	<p class="value">12m<sup>2</sup></p>
+																</div>
+																<div class="col panio">
+																	<p class="label">Ventana #3</p>
+																	<p class="value">12m<sup>2</sup></p>
+																</div>
+															</div>
+														</div>
+														
+
+													</div>
+													<div class="btn-set row">
+														<div class="col-md-4 col-xl-3">
+															<button class="btn btn-primary btn-small">
+																Editar
+															</button>	
+														</div>
+														
+														<div class="col-md-8 col-xl-9">
+															<p class="form-text small"><i class="far fa-info-circle"></i> Si editas las características del local, los servicios existentes serán pausados hasta que se confirmen los nuevos precios.</p> </div>
+													</div>
+												</div>
+
+											</div>
+											
+										</div>
+										<div class="form-group row">
+											<div class="col-auto d-none d-md-block">
+												<img src="/img/ico-balde-form.jpg" alt="Limpiamos tu vidriera" class="img-fluid">
+											</div>
+											<div class="col">
+												<h4>Tipo de limpieza incluida</h4>
+												<p>Vamos a limpiar tus vidrieras de todo tipo de suciedad que sea soluble al agua. No podemos limpiar tus vidrieras de graffitis o pintura al ácido.</p>
+												<p><input type="checkbox" />Entiendo y acepto lo que está incluido.</p>
+											</div>
+										</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    					<div class="wizard-footer">
+	    						<div class="inner-container">
+	    							<button class="btn btn-primary" disabled>Siguiente</button>	
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 logo">
+						<img src="/img/logo-small@2x.jpg" alt="Joya" class="img-fluid" width="85" height="31">
+						<p class="copy">© 2021 Joya</p>
+					</div>
+					<div class="col-md-10 link-blocks">
+						<div class="row">
+							<div class="col col-lg-4 link-block">
+								<p class="title">Servicio</p>
+								<ul>
+									<li><a href="#">Contratá JOYA</a></li>	
+									<li><a href="#">Política de cancelación</a></li>
+									<li><a href="#">Ayuda</a></li>
+									<li><a href="#">Términos y condiciones</a></li>
+									<li><a href="#">Política de privacidad</a></li>
+								</ul>
+					
+							</div>
+							<div class="col col-lg-4 link-block">
+								<p class="title">Nosotros</p>
+								<ul>
+									<li><a href="#">Sobre nosotros</a></li>
+									<li><a href="#">Convertite en vidrierista JOYA</a></li>
+								</ul>
+							
+							</div>
+							<div class="col col-lg-4 link-block">
+								<p class="title">Contacto</p>
+								<ul>
+									<li>
+										<i class="far fa-envelope"></i>
+										<a href="mailto:ayuda@joya.com">ayuda@joya.com</a>
+									</li>
+									<li>
+										<i class="far fa-phone"></i>
+										<a href="tel:+5491145674568">011.4567.4568</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	
+	<script type="text/javascript" src="/dist/js/bundle.js"></script>
+</body>
+</html>

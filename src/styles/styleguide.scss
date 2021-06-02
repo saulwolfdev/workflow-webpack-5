@@ -1,0 +1,58 @@
+
+/* @import 'general/general';
+ */
+//Formats exclusive to styleguide:
+
+body {
+	padding-bottom: 150px;
+}
+.intro-heading {
+	position: relative;
+	padding: 20px 0;
+	&:after {
+		@include fake-shadow;
+		top: auto; 
+		bottom: -25px; 
+	}
+}
+.link-section {
+	li {
+		a {vertical-align: text-top; margin: 0; }
+	}
+}
+.color-block {
+	display: flex;
+    flex-direction: column;
+    > .row {
+    	flex-grow: 1; 
+    }
+}
+.square-color {
+	padding: 20px;
+	font-size: 1.5rem;
+}
+.bg-block {
+	padding-bottom: 1rem; padding-top: 1rem;
+
+	&.bg-light {border: 1px solid $border-color; }
+}
+.section, .sub-section {margin-top: 50px;}
+
+.color-section > .row > div {
+	margin-top: 30px; 
+}
+
+.h2.font-text {
+	font-family: $font;
+}
+p.note {font: 400 16px/1.2rem $font; padding-top: 0;}
+
+.heading-chart .heading {padding-bottom: 1.5rem; }
+
+.icons-section {
+	.icons {
+		font-size: 30px;	
+		i, svg {margin-right: 8px; }
+	}
+	
+}

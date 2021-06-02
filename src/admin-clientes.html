@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+	
+<head>
+	<link rel="manifest" href="webmanifest.manifest"> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Joya - Admin - Clientes</title>
+	<meta name="title" content="Joya - Admin - Clientes">
+	<meta name="description" content="Lorem ipsum sid dolor amet" />
+
+	<!--<base href="file:///D:/BitBucket%20Repos/joya-front-end/">-->
+
+	<link rel="icon" href="/assets/favicons/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="/assets/favicons/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><!-- 180×180 -->
+	
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+	<link href="/assets/fonts/fontawesome-pro-5.7.2-web/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/dist/admin.css">
+
+</head>
+<body class="">
+	<div id="wrapper">
+		<div class="overlay"></div>
+		<header class="fixed-top-scroll fixed-top">
+	        <nav class="navbar">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-auto logo-div">
+	                        <h1 class="site-title">
+	                            <a class="navbar-brand main-logo" href="#" rel="home" style="background-image: url('/img/logo@2x.png');">Joya</a>
+	                        </h1>
+	                    </div>
+	                    <div class="col menu-col">
+	                        <button class="navbar-toggler hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+	                            <span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+	                            	<ul class="menu admin-menu">
+	                            		<li><a href="#">Agenda</a></li>
+	                            		<li><a href="#">Recorridos</a></li>
+	                            		<li class="user-options dropdown closed">
+		                        			<span class="a">
+		                        				Vidrieristas
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+		                        		<li class="user-options dropdown closed">
+		                        			<span class="a">
+		                        				Clientes
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+		                        		<li class="user-options dropdown closed">
+		                        			<span class="a">
+		                        				Locales
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+		                        		<li class="user-options dropdown closed">
+		                        			<span class="a user-item">
+		                        				Balance
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+	                            		<li class="user-options dropdown closed">
+		                        			<span class="a">
+		                        				<i class="far fa-user-circle d-none d-lg-inline"></i>
+		                        				<span class="d-none d-xl-block">Carolina</span>
+		                        				<span class="d-xl-none">Ajustes</span>
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+	                            	</ul>
+
+	                            </div>
+	                        </nav>
+	                    </div>
+	                </div>
+	            </div>
+	        </nav>
+	    </header>
+	    <div class="main-content clientes-lista">
+	    	<div class="cliente-sintesis">
+	    		<div class="container-fluid">
+    				<div class="row sintesis-header">
+	    				<h3 class="col-auto">Clientes</h3>	
+	    				<div class="btn-set col-auto">
+	    					<button class="btn btn-outline btn-small">Descargar CSV <i class="far fa-arrow-alt-to-bottom"></i></button>
+	    				</div>
+    				</div>
+    				<div class="row stats">
+    					<div class="col-auto stat">
+    						<p class="label">Total</p>
+    						<p class="value"><span class="number strong">105</span></p>
+    					</div>
+    					<div class="col-auto stat">
+    						<p class="label">Vigentes</p>
+    						<p class="value"><span class="number">80</span> </p>
+    					</div>
+    					<div class="col-auto stat">
+    						<p class="label">Pendientes de pago</p>
+    						<p class="value"><span class="number">75</span></p>
+    					</div>
+    					<div class="col-auto stat">
+    						<p class="label">Vencidos</p>
+    						<p class="value"><span class="number">25</span></p>
+    					</div>
+    				</div>
+	    		</div>
+	    	</div>
+	    	<div class="more-content">
+	    		<div class="content-block clientes-lista">
+	    			<div class="container-fluid">
+	    				<div class="filter-row form form-rounded form-small">
+	    					<div class="col-auto title">Filtros:</div>
+	    					<div class="col-auto filtro">
+	    						<p class="label">Nivel de actividad</p>
+	    						<select class="form-select" aria-label="Usuarios activos" name="actividad" id="nivelActividad">
+	    							<option value="a" selected="selected">Activos este mes</option>
+	    							<option value="b">Activos mes pasado</option>
+	    							<option value="c">Bla</option>
+	    						</select>
+	    					</div>
+	    					<div class="col-auto filtro">
+	    						<p class="label">Antigüedad</p>
+	    						<select class="form-select" aria-label="Antigüedad" name="actividad" id="antiguedad">
+	    							<option value="a" selected="selected">Todos</option>
+	    							<option value="b">Activos mes pasado</option>
+	    							<option value="c">Bla</option>
+	    						</select>
+	    					</div>
+	    					<div class="col-auto filtro">
+	    						<p class="label">Suscripción</p>
+	    						<select class="form-select" aria-label="Suscripción" name="actividad" id="antiguedad">
+	    							<option value="a" selected="selected">Todas</option>
+	    							<option value="b">Activos mes pasado</option>
+	    							<option value="c">Bla</option>
+	    						</select>
+	    					</div>
+	    					
+	    					<input class="expansible-search expansible-search-right" type="search" placeholder="Search">
+	    				</div>
+
+
+	    				
+	    				<div class="locales row">
+	    					<!-- Local verificado -->
+	    					<div class="col-md-6 local">
+	    						
+		    					<div class="card">
+		    						<div class="data-main row">
+		    							<div class="col">
+		    								<h4>Kentucky Santa Fe</h4>
+		    								<p class="direccion">Av. Santa Fe 2702, Palermo, Comuna 12</p>
+		    							</div>
+		    							<div class="col-auto">
+		    								<div class="imagen-local local-verificado" style="background-image: url(/img/beneficios-side.jpg)"></div>
+		    							</div>
+		    						</div>
+		    						<div class="data-table row">
+		    							<div class="col-auto superfice">
+		    								<p class="label">Superficie</p>
+		    								<p class="data">64m<sup>2</sup> <i class="c-success far fa-check-circle"></i></p>
+		    							</div>
+		    							<div class="col-auto tiempo">
+		    								<p class="label">Tiempo estimado</p>
+		    								<p class="data">10 minutos</p>
+		    							</div>
+		    							<div class="col-auto pedidos">
+		    								<p class="label">Pedidos</p>
+		    								<p class="data">254</p>
+		    							</div>
+		    						</div>
+		    						<div class="btn-set">
+		    							<div class="alertas"></div>
+		    							<a class="btn btn-outline btn-small">Editar</a>
+		    						</div>
+		    					</div>
+		    				</div>
+	    					<!-- Local con problemas: no tiene imagen -->
+	    					<div class="col-md-6 local">
+		    					<div class="card">
+		    						<div class="data-main row">
+		    							<div class="col">
+		    								<h4>Kentucky Santa Fe</h4>
+		    								<p class="direccion">Av. Santa Fe 2702, Palermo, Comuna 12</p>
+		    							</div>
+		    							<div class="col-auto">
+		    								<div class="imagen-local sin-imagen"></div>
+		    							</div>
+		    						</div>
+		    						<div class="data-table row">
+		    							<div class="col-auto superfice">
+		    								<p class="label">Superficie</p>
+		    								<p class="data">64m<sup>2</sup> <i class="c-success far fa-check-circle"></i></p>
+		    							</div>
+		    							<div class="col-auto tiempo">
+		    								<p class="label">Tiempo estimado</p>
+		    								<p class="data">10 minutos</p>
+		    							</div>
+		    							<div class="col-auto pedidos">
+		    								<p class="label">Pedidos</p>
+		    								<p class="data">254</p>
+		    							</div>
+		    						</div>
+		    						<div class="btn-set">
+		    							<div class="alertas"><i class="far fa-exclamation-triangle"></i>Foto de fachada pendiente</div>
+		    							<a class="btn btn-outline btn-small">Editar</a>
+		    						</div>
+		    					</div>
+		    				</div>
+	    					<!-- Local con problemas: superficie a confirmar -->
+	    					<div class="col-md-6 local">
+		    					<div class="card">
+		    						<div class="data-main row">
+		    							<div class="col">
+		    								<h4>Kentucky Santa Fe</h4>
+		    								<p class="direccion">Av. Santa Fe 2702, Palermo, Comuna 12</p>
+		    							</div>
+		    							<div class="col-auto">
+		    								<div class="imagen-local" style="background-image: url(/img/beneficios-side.jpg)"></div>
+		    							</div>
+		    						</div>
+		    						<div class="data-table row">
+		    							<div class="col-auto superfice">
+		    								<p class="label">Superficie</p>
+		    								<p class="data">80m<sup>2</sup> <span class="superficie-anterior">64m<sup>2</span></p>
+		    							</div>
+		    							<div class="col-auto tiempo">
+		    								<p class="label">Tiempo estimado</p>
+		    								<p class="data">10 minutos</p>
+		    							</div>
+		    							<div class="col-auto pedidos">
+		    								<p class="label">Pedidos</p>
+		    								<p class="data">254</p>
+		    							</div>
+		    						</div>
+		    						<div class="btn-set">
+		    							<div class="alertas"><i class="far fa-exclamation-triangle"></i>Superficie a confirmar</div>
+		    							<a class="btn btn-outline btn-small">Editar</a>
+		    						</div>
+		    					</div>
+		    				</div>
+	    					<!-- Local nuevo (sin imagen y todo a confirmar)-->
+	    					<div class="col-md-6 local">
+	    						
+		    					<div class="local card nuevo">
+		    						<div class="data-main row">
+		    							<div class="col">
+		    								<h4>Kentucky Santa Fe</h4>
+		    								<p class="direccion">Av. Santa Fe 2702, Palermo, Comuna 12</p>
+		    							</div>
+		    							<div class="col-auto">
+		    								<div class="imagen-local sin-imagen"></div>
+		    							</div>
+		    						</div>
+		    						<div class="data-table row">
+		    							<div class="col-auto superfice">
+		    								<p class="label">Superficie</p>
+		    								<p class="data">64m<sup>2</sup></p>
+		    							</div>
+		    							<div class="col-auto tiempo">
+		    								<p class="label">Tiempo estimado</p>
+		    								<p class="data">10 minutos</p>
+		    							</div>
+		    							<div class="col-auto pedidos">
+		    								<p class="label">Pedidos</p>
+		    								<p class="data">254</p>
+		    							</div>
+		    						</div>
+		    						<div class="btn-set">
+		    							<div class="alertas">
+		    								<i class="far fa-exclamation-triangle"></i>Foto de fachada pendiente
+		    								<br><i class="far fa-exclamation-triangle"></i>Superficie a confirmar
+		    							</div>
+		    							<a class="btn btn-outline btn-small">Editar</a>
+		    						</div>
+		    					</div>
+		    				</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copy">© 2021 Joya</p>
+			</div>
+		</footer>
+	</div>
+
+	
+	<script type="text/javascript" src="/dist/js/adminJS.js"></script>
+</body>
+</html>

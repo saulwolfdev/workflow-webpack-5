@@ -1,0 +1,127 @@
+
+.step2 {
+	.form {padding-top: 8px; }
+	.modalidades {
+		margin-top: 0.5rem; 
+		& > * {
+			display: flex; 
+			flex-direction: column; 
+			justify-content: center; 
+		}
+	}
+	.modalidad {
+		@include img-text-block;
+		$offset-destacada: 15px; 
+		
+		display: flex; 
+		flex-direction: row; 
+		box-shadow: 0px 6px 30px rgba(#000000, 0.1);
+		border: 1px solid $border-color; 
+		border-radius: 9px; 
+		padding: 30px 20px;
+		margin-bottom: 15px; 
+	    
+	    
+	    cursor: pointer; 
+	    transition: box-shadow 0.5s ease;
+
+	    p {font-size: 14px;} 
+	    .img-block {
+	    	width: 90px;
+		    height: 75px;
+		    flex-shrink: 0;
+		    flex-grow: 0;
+		    margin-right: 8px;
+		}
+		img {
+			margin: auto; 
+			max-height: 100%;
+	    	width: auto;
+		}
+	    &.destacada {
+	    	padding: 40px 20px 45px; 
+	    	height: 100%;
+	    	position: relative; 
+	    	&:before {
+	    		content: ""; 
+	    		position: absolute;
+	    		top: 22px; right: 15px; 
+	    		width: 22px; height: 22px; 
+	    		background: transparent url("../assets/img/shimmer.png") no-repeat center center;
+	    		background-size: contain;
+	    	} 
+	    }
+	    &.active {
+	    	border-color: $c-primary;
+	    }
+	    &:hover {
+	    	box-shadow: 0px 6px 30px rgba(#000000, 0.3);
+	    }
+
+	    @media (min-width: $start-md) {
+	    	/*.img-block {
+	    	width: 90px;
+		    height: 75px;
+		    flex-shrink: 0;
+		    flex-grow: 0;
+		    margin-right: 8px;
+		}*/
+	    	.img-block {
+	    		height: 86px; 
+	    		width: auto; margin-right: 0; 
+	    	}
+	    	img {
+				margin: auto; 
+				max-height: 100%;
+		    	width: auto;
+			}
+	    	display: block; 
+	    	height: calc(100% - 2 * #{$offset-destacada});
+	    	text-align: center;
+	    	padding: 25px 20px 30px;
+	    	&.destacada { padding: 40px 20px 45px; }
+	    }
+	    @media (min-width: $start-lg) {
+	    	padding: 30px 25px 35px;
+	    	&.destacada { padding: 45px 25px 50px; }
+	    }
+	}
+	.frequency-form {
+		display: none; 
+		padding-top: 45px; 
+
+		&.active {display: block; }
+		.btn-outline-form {width: 100%; }
+		.btn-check {display: none; }
+		input[type=checkbox]:checked + .btn {
+			border-color: $c-primary; 
+			box-shadow: 0px 0px 2px $c-primary;
+		}
+		& > .row {
+			margin-bottom: 45px; 
+			&:last-child {margin-bottom: 15px; }
+		}
+		.col-label {
+			min-width: 100px; 
+			label {padding-bottom: 1rem; }
+		}
+		.form-check {
+			&:last-child {
+				padding-top: 30px; padding-bottom: 30px; 
+				margin-top: 30px; 
+				border-top: 1px solid $border-color; 
+
+				display: flex; flex-direction: row; align-items: center;
+
+				input[type=radio] {
+					margin-right: 7px; 
+				}
+				select {
+					width: auto; 
+					margin-left: 20px; 
+
+				}
+			}
+		}
+	}
+}

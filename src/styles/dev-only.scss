@@ -1,0 +1,22 @@
+//Estas clases son para uso de los devs, para hacer pruebas visuales y dejar comentarios.
+//Esta módulo de scss debe eliminarse en producción, y borrarse las clases del html.
+
+body.dev-user-login {
+	.menu-col.public-nav {display: none !important;}
+}
+body:not(.dev-user-login) {
+	.menu-col.user-nav {display: none !important; }
+}
+
+.dev-note {
+	//.alert-warning de Bootstrap
+	margin-top: 1rem;
+	color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}

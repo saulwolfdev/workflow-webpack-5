@@ -1,0 +1,25 @@
+footer {
+	padding: 55px 0; 
+	.logo img {max-width: 85px; }
+	.title {
+		font: 600 16px/1.5em $font-display; 
+		color: $c-primary; 
+	}
+	ul {padding-left: 0; }
+	li {list-style: none; }
+	li a {
+		font: 14px/16px $font; 
+		text-decoration: none; 
+		color: $text-dark; 
+		&:hover, &:focus, &:active {
+			text-decoration: underline; 
+		}
+	}
+	.link-blocks {flex-wrap: wrap; }
+	.link-block {min-width: 200px; }
+	.link-block i {
+	    margin-right: 8px;
+    	vertical-align: middle;
+	}
+	.copy {color: $text-dark-secondary;}
+}

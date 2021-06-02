@@ -1,0 +1,50 @@
+
+.step3 {
+	.col-detalle {
+		padding: 20px 15px 75px;  
+		order: -1;
+
+		@media (min-width: $start-md) {
+			order: 2; 
+			position: absolute;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    padding: 75px 45px 50px; 
+		    @include bg-light-1;
+		    border-bottom-right-radius: 9px;
+		    h4 {@include h5;}
+		}
+	
+	}
+	table.detalle-compra {
+		width: 100%; 
+		border-top: 1px solid $border-color; 
+		border-bottom: 1px solid $border-color; 
+		margin: 16px 0; 
+
+		td {
+			padding: 8px 0; 
+
+			&.descripcion {}
+			&.valor {text-align: right; }
+			&.destacado {color: $c-primary; }
+		}
+		tbody, tfoot {
+			tr:first-child td {
+				padding-top: 16px;
+			}
+			tr:last-child td {
+				padding-bottom: 16px;
+			}
+		}
+		tbody {
+			border-bottom: 1px solid $border-color; 
+		}
+
+		tfoot td {
+			font: 600 15px/22px $font-display; 
+			text-transform: uppercase; 
+		}
+	}
+}

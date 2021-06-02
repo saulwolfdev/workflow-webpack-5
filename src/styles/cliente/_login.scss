@@ -1,0 +1,20 @@
+
+
+.accountModal {
+	.modal-dialog {
+		@media (min-width: $start-lg) {
+			max-width: 560px;
+		}
+	}
+	.modal-body, .modal-footer {padding: 0; }
+	.modal-content {
+		//Compartido por login y registro
+		padding: 57px 67px;
+	}
+	.modal-footer {
+		justify-content: center; 
+		border: none; 
+		.btn {width: 100%; }
+
+	}
+}

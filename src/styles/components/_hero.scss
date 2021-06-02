@@ -1,0 +1,36 @@
+
+.hero {
+	@include primary-gradient; 
+
+	background-position: center center; 
+	background-size: cover; 
+	
+	min-height: 80vh;
+	
+
+	display: flex;
+    align-items: center;
+    position: relative; 
+    z-index: 0;
+
+	p {
+		font: 500 24px/1.33em $font-display; 
+	}
+
+	
+	.form-text {color: $text-light; padding-top: 20px;}
+
+	.hero-content {
+		padding-top: 70px; padding-bottom: 70px; 
+	}
+
+	&:after {
+		@include overlay; 
+		@include primary-gradient-overlay;
+		right: 20%;
+		z-index: 1; 
+		opacity: 0.7;
+	}
+	& > .container-fluid {z-index: 2;}
+
+}

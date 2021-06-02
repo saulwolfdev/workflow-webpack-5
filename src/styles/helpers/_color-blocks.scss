@@ -1,0 +1,56 @@
+@mixin primary-color-block {
+	background-color: $c-primary;
+	color: $text-light; 
+}
+.primary-color-block {
+	@include primary-color-block;
+}
+@mixin secondary-color-block {
+	background-color: $c-secondary;
+	color: $text-dark; 
+}
+.secondary-color-block {
+	@include secondary-color-block;
+}
+
+
+@mixin primary-gradient {
+	color: $text-light;
+	background: rgb(19,67,198);
+	background: linear-gradient(90deg, rgba(19,67,198,1) 0%, $c-primary 60%, rgba(0,147,255,1) 100%);
+}
+@mixin primary-gradient-overlay {
+	color: $text-light;
+	background: transparent;
+	background: linear-gradient(90deg, #0B36AD 0%, rgba(#0B36AD,0) 100%);
+}
+.primary-gradient {
+	@include primary-gradient; 
+}
+.primary-gradient-overlay {
+	@include primary-gradient-overlay; 
+}
+
+
+
+@mixin bg-light {
+	background-color: $bg-light; 
+	color: $text-dark;
+}
+@mixin bg-light-1 {
+	background-color: $bg-light-1; 
+	color: $text-dark;
+}
+@mixin bg-dark {
+	background-color: $bg-dark; 
+	color: $text-light;
+}
+.bg-light {
+	@include bg-light; 
+}
+.bg-light-1 {
+	@include bg-light-1; 
+}
+.bg-dark {
+	@include bg-dark; 
+}

@@ -1,0 +1,10 @@
+.btn-close {
+	background: transparent;
+	padding: 8px; 
+	border: none; 
+	width: auto;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+	&:before {font: 400 18px/20px $font-icons; content: "\f00d";}
+}

@@ -1,0 +1,157 @@
+
+
+.clean-wizard {
+	$steps-height-lg: 90px; 
+	background: #F7F7F7 url("../assets/img/wizard-bg.jpg") no-repeat top center; 
+	background-size: contain; 
+
+
+	.wizard-content, .wizard-steps, .wizard-footer {
+		display: flex; 
+		margin: auto; 
+		justify-content: center; 
+	}
+	.inner-container {
+		width: 85%;
+
+		@media (min-width: $start-md) {
+			width: 80%;	
+		}
+		
+	}
+	.wizard-container {
+		background: #ffffff; 
+		margin: 23px auto 50px; 
+		border-radius: 9px; 
+		box-shadow: 0px 33px 36px rgba(0,0,0,0.06);
+		padding: 0; 
+
+		@media (min-width: $start-sm) {
+			margin-top: 53px; 
+		}
+		@media (min-width: $start-md) {
+			margin-top: 83px; 
+		}
+
+	}
+	.wizard-steps {
+		height: $steps-height-lg; 
+
+
+		ul {
+			@include horizontal-nav; 
+			margin-bottom: 0; 
+
+			li {
+				font: 400 15px $font-display; 
+				line-height: $steps-height-lg;
+				border-bottom: 3px solid #fff;
+
+				&.title {font-weight: 600; }
+				&:first-child {padding-left: 0; }
+
+			}
+		}
+	}
+	.wizard-content, .wizard-footer {
+		position: relative; 
+		&:before {
+			@include fake-shadow;
+		} 
+	}
+	.wizard-content {
+		padding-top: 50px; padding-bottom: 50px; 
+	}
+	.wizard-footer {
+		padding-top: 25px; padding-bottom: 25px; 
+		
+
+		.inner-container {
+			display: flex; 
+			flex-direction: row; 
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap; 
+
+			& > * {
+				margin-right: 15px; margin-bottom: 10px; 
+				&:last-child {margin-right: 0; }
+			}
+
+
+		}
+		
+		.calc-precio {
+			.currency { font: bold 24px $font-display;}
+			.precio { font: bold 36px $font-display;}
+			.small { font: 400 13px $font; color: $text-dark-secondary; display: inline-block; }
+		}
+		.btn {margin-top: 0; width: 100%; }
+
+		@media (min-width: $start-sm) {
+			.calc-superficie {
+				margin-right: auto; 
+			}
+			.inner-container {justify-content: flex-end;}
+			.calc-precio {margin-right: 20px; }
+			text-align: left; 
+		}
+		@media (min-width: $start-md) {
+			.calc-precio {margin-right: 40px; }
+			.currency { font-size: 24px;}
+			.precio { font-size: 48px;}
+			.btn {width: auto;}
+		}
+	}	
+}
+
+//Change step display (may not be necessary in app)
+@mixin active-step {
+	border-bottom-color: $c-primary;
+	i {position: relative; }
+	i:after {
+		$inner-height: 6px; 
+		$border-width: 2px; 
+		$full-size: $inner-height + 2 * $border-width; 
+		content: "";
+		background-color: $c-primary; 
+		width: $full-size; height: $full-size; 
+		display: block; 
+		position: absolute; top: -0.5 * $full-size; right: -0.5 * $full-size; 
+		border: $border-width solid #fff; 
+		border-radius: 50%;
+
+	}
+}
+
+
+
+//For dev purposes only
+.clean-wizard {
+	&.step1 {
+		.wizard-steps li.step1 {
+			@include active-step;
+		}
+		//.wizard-content .inner-container:not(.step1) {display: none;}
+
+		&.localnuevo {
+			.block-alternative:not(.localnuevo) {display: none; }
+		}
+		&.localexistente {
+			.block-alternative:not(.localexistente) {display: none; }
+		}
+	}
+
+	&.step2 {
+		.wizard-steps li.step2 {
+			@include active-step;
+		}
+		//.wizard-content .inner-container:not(.step2) {display: none;}
+	}
+	&.step3 {
+		.wizard-steps li.step3 {
+			@include active-step; 
+		}
+	}
+}
+

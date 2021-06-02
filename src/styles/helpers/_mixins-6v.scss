@@ -1,0 +1,41 @@
+@mixin overlay {
+	position: absolute; top: 0; right: 0; left: 0; bottom: 0;
+	content: "";
+}
+
+@mixin misc-onda {
+/* 	background: #ffffff url(assets/img/miscelanea-onda.png) top left no-repeat;  */
+	background-size: contain;
+	width: 200px; height: 30px; 
+}
+
+@mixin horizontal-nav {
+	display: flex; flex-direction: row; 
+	list-style: none; 
+	padding-left: 0;
+
+	li {
+		padding-left: 15px; padding-right: 15px; 
+		i { margin-right: 8px; }
+	}
+}
+
+@mixin fake-shadow {
+	content: "";
+	position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+	height: 25px; 
+	background: #ffffff;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,240,240,0.63) 100%);
+}
+
+@mixin img-text-block {
+	.title {
+		margin: 16px 0 8px;
+	}
+	.img-block {
+	    height: 86px;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+}

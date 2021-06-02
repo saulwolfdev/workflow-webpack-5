@@ -1,0 +1,144 @@
+$btn-height: 50px;
+$btn-height-small: 40px; 
+$btn-height-big: 60px; 
+
+@mixin default-focus {
+	outline:0;
+	box-shadow: none;
+}
+
+
+.btn, a.btn {
+	
+	font-size: 1rem; 
+	font-weight: bold;
+	transition: all .3s;
+	margin-top: 1rem;
+
+	&.disabled,
+	&:disabled {
+	    pointer-events:none; 
+	}
+
+	$transition-bezier: 1.000, 0.000, 0.000, 1.000;
+	$transition-len: 0.35s;
+	$bg-animation-len: 1.5s;
+	&::before,
+	&::after {
+	  content: '';
+	  position: absolute;
+	  z-index: -1;
+	  transition: all $transition-len cubic-bezier($transition-bezier); 
+	}
+
+	display: inline-block;
+	//padding: 16px;
+	overflow: hidden;
+	
+	text-decoration: none;
+	//border: 1px solid $pink;
+	//border-radius: 3px;
+	background-position: 0 -100%;
+	background-repeat: repeat-x;
+	transition: background-position $bg-animation-len ease;	
+}
+a.btn-primary, a.btn-secondary {display: inline-block;}
+
+.btn-primary, .btn-secondary {
+
+	height: $btn-height; line-height: $btn-height; 
+	border-radius: $btn-height/2;
+	padding-left: $btn-height; padding-right: $btn-height; 
+	
+	position: relative;
+	overflow: hidden; 
+	
+	&:focus, &:active {
+		@include default-focus;
+	}
+
+	&.disabled, 
+	&:disabled {
+	    opacity: 0.38;
+	}
+
+	&:hover {
+	  background-position: 100% 50%;
+	}
+	
+	&.btn-big {
+		height: $btn-height-big; line-height: $btn-height-big; 
+		border-radius: $btn-height-big/2;
+		padding-left: $btn-height-big; padding-right: $btn-height-big; 
+	}
+	&.btn-small {
+		height: $btn-height-small; line-height: $btn-height-small; 
+		border-radius: $btn-height-small/2;
+		padding-left: $btn-height-small; padding-right: $btn-height-small; 
+	}
+}
+
+.btn-primary, a.btn-primary, a:not([href]).btn-primary {
+	@include primary-color-block;
+
+	text-decoration: none;
+	border: none; 	
+  	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg width='301px' height='137px' viewBox='0 0 301 137' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EPath 2%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M0.501953125,8.96289062 L0.501953125,136.298021 L300.36166,136.298021 L300.36166,7.21246267 C300.36166,7.21246267 290.451172,12.0683594 278.185547,12.0683594 C265.919922,12.0683594 247.033203,0.107421875 199.8125,0.107421875 C152.591797,0.107421875 127.671875,9.50585937 101.431641,9.50585937 C75.1914062,9.50585937 55.1601562,0.955078125 41.6308594,0.955078125 C28.1015625,0.955078125 0.501953125,8.96289062 0.501953125,8.96289062 Z' id='Path-2' fill='%231221C4'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.btn-secondary, a.btn-secondary, a:not([href]).btn-secondary {
+	@include secondary-color-block;
+
+	border: none; 
+	text-decoration: none; 
+
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg width='301px' height='137px' viewBox='0 0 301 137' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EPath 2%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M0.501953125,8.96289062 L0.501953125,136.298021 L300.36166,136.298021 L300.36166,7.21246267 C300.36166,7.21246267 290.451172,12.0683594 278.185547,12.0683594 C265.919922,12.0683594 247.033203,0.107421875 199.8125,0.107421875 C152.591797,0.107421875 127.671875,9.50585937 101.431641,9.50585937 C75.1914062,9.50585937 55.1601562,0.955078125 41.6308594,0.955078125 C28.1015625,0.955078125 0.501953125,8.96289062 0.501953125,8.96289062 Z' id='Path-2' fill='%2326E5D6'%3E%3C/path%3E%3C/g%3E%3C/svg%3E"); 
+
+	&:hover {
+		background-position: 100% 50%;
+	}
+	&:active, &:focus {
+		@include default-focus;
+	}
+	
+	&.disabled, 
+	&:disabled {
+	    opacity: 0.38;
+	}
+}
+
+.btn-round {
+	padding: 0; width: $btn-height;
+}
+
+
+.link-text {
+	&:active, &:focus {
+		@include default-focus;
+	}
+}
+
+.btn-tertiary, a.btn-tertiary, a:not([href]).btn-tertiary {
+	font: 600 15px/22px $font-display; 
+	color: $c-primary; 
+	background: transparent;
+	border:  none; 
+	display: inline-block;
+
+	&:hover, &:active, &:focus {
+		color: #1221C4;
+	}
+	&:active, &:focus {
+		@include default-focus;
+	}
+	&:disabled, &.disabled {
+		opacity: 0.38;
+	} 
+}
+
+.btn-outline-form {
+	border-radius: 6px; 
+	height: 65px; border: 1px solid $border-color; 
+	font: 600 15px/63px $font-display;
+	padding: 0 25px;
+	text-align: center; 
+}

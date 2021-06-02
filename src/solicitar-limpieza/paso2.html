@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+	
+<head>
+	<link rel="manifest" href="webmanifest.manifest"> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Joya - Solicitar limpieza - Paso 2</title>
+	<meta name="title" content="Joya - Solicitar limpieza - Paso 2">
+	<meta name="description" content="Lorem ipsum sid dolor amet" />
+
+	<link rel="icon" href="/assets/favicons/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="/assets/favicons/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><!-- 180×180 -->
+	
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+	<link href="/assets/fonts/fontawesome-pro-5.7.2-web/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/dist/style.css">
+
+</head>
+<body class="dev-user-login">
+	<div id="wrapper">
+		<div class="overlay"></div>
+		<header class="fixed-top-scroll fixed-top">
+	        <nav class="navbar">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-auto logo-div">
+	                        <h1 class="site-title">
+	                            <a class="navbar-brand main-logo" href="#" rel="home" style="background-image: url('/img/logo@2x.png');">Joya</a>
+	                        </h1>
+	                    </div>
+	                    <!-- NOTA: sólo uno de los user-navs va a estar presente en el HTML en cada momento, esto será manejado según esté logueado o no el usuario. La técnica de ocultar uno de los menúes con css es únicamente para la maqueta -->
+	                    <div class="col menu-col user-nav">
+	                    	<button class="navbar-toggler user-toggle hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu-user" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                				<span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+						         	<ul class="menu user-menu">
+						         		<li class="username d-lg-none"><span class="a">
+		                        			<i class="far fa-user-circle"></i>
+		                        			Carolina	                        			
+		                        		</span></li>
+		                        		<li class="ayuda"><a href="#">Ayuda</a></li>
+		                        		<li><a href="#" class="destacado">Solicitar limpieza de vidriera</a></li>
+		                        		<li class="separator"></li>
+		                        		<li class="user-item"><a href="#">Tus pedidos</a></li>
+		                        		<li class="user-options dropdown closed">
+		                        			<span class="a user-item">
+		                        				<i class="far fa-user-circle"></i>
+		                        				Carolina
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+		                        	</ul>
+		                        </div>
+		                    </nav>
+	                    </div>
+	                    <div class="col menu-col public-nav">
+	                        <button class="navbar-toggler hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+	                            <span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+	                            	<ul class="menu public-menu">
+	                            		<li><a href="#">Ayuda</a></li>
+	                            		<li><a href="#" class="destacado">Solicitar limpieza de vidriera</a></li>
+	                            		<li class="separator"></li>
+	                            		<li><a href="#" class="destacado">Iniciar sesión</a></li>
+	                            	</ul>
+
+	                            </div>
+	                        </nav>
+	                    </div>
+	                </div>
+	            </div>
+	        </nav>
+	    </header>
+	    <div class="main-content">
+	    	<div class="clean-wizard step2"><!-- La clase step2 en esta línea determina qué se muestra activo abajo -->
+	    		<div class="container-fluid">
+	    			<div class="row">
+	    				<div class="col-12 col-lg-10 wizard-container">
+	    					<div class="wizard-steps">
+	    						<ul class="inner-container">
+	    							<li class="title"><span class="d-none d-md-inline">Tu solicitud:</span><span class="d-md-none">Pasos:</span> </li>
+	    							<li class="step step1"><i class="fal fa-store"></i><span class="d-none d-lg-inline">Detalles del local</span><span class="d-none d-md-inline d-lg-none">El local</span></li>
+	    							<li class="arrow">&rsaquo;</li>
+	    							<li class="step step2"><i class="fal fa-calendar-alt"></i><span class="d-none d-md-inline">Día y hora</span></li>
+	    							<li class="arrow">&rsaquo;</li>
+	    							<li class="step step3"><i class="fal fa-credit-card"></i><span class="d-none d-md-inline">Pago</span></li>
+	    						</ul>
+	    					</div>
+	    					<div class="wizard-content">
+	    						<div class="step2 inner-container">
+	    							<h4>Frecuencia</h4>
+	    							<p>Con nuestro servicio recurrente ahorrá y despreocupate por completo de tus vidrieras.</p>
+	    							<div class="form">
+	    								<div class="row modalidades">
+	    									<div class="col-md-4">
+		    									<div class="modalidad" data-form="#freq-unica">
+		    										<div class="img-block"><img class="img-fluid" src="/img/xq_03.jpg"  width="130" height="80" alt="Servicio por única vez"></div>
+							    					<div class="text">
+							    						<h5 class="title">Única vez</h5>
+							    						<p>Contratás una vez y listo!</p>
+							    					</div>
+		    									</div>
+		    								</div>
+	    									<div class="col-md-4">
+	    										<div class="modalidad destacada" data-form="#freq-suscripcion">
+			    									<div class="img-block"><img class="img-fluid" src="/img/xq_02.jpg"  width="130" height="80" alt="Suscripción a limpieza programada"></div>
+							    					<div class="text">
+							    						<h5 class="title">Suscripción</h5>
+							    						<p>Descuentos desde 10% según la frecuencia que elijas!</p>
+							    						<a href="#" class="btn-tertiary">Ver todos los beneficios</a>
+							    					</div>
+							    				</div>
+	    									</div>
+	    									<div class="col-md-4">
+	    										<div class="modalidad" data-form="#freq-urgencia">
+		    										<div class="img-block"><img class="img-fluid" src="/img/xq_06.jpg"  width="130" height="80" alt="Suscripción a limpieza programada"></div>
+							    					<div class="text">
+							    						<h5 class="title">Urgencia</h5>
+							    						<p>Vamos a tu local en el día, lo más rápido posible.</p>
+							    					</div>
+		    									</div>
+		    								</div>
+	    								</div>
+	    								<div class="frequency-form" id="freq-unica">
+	    									<div class="row dia-visita">
+	    										<div class="col-lg-2 col-3 col-label">
+	    											<label for="freq-unica-dia" class="h4">Día</label>
+	    										</div>
+	    										<div class="col col-field">
+	    											<!-- Contemplar posibilidad de incluir un datepicker de react -->
+													<input type="date" name="freq-unica-dia" class="form-control">
+	    										</div>
+	    									</div>
+	    									<div class="row franja-horaria">
+	    										<div class="col-lg-2 col-3 col-label">
+	    											<label for="freq-unica-hora" class="h4">Horario</label>
+	    										</div>
+	    										<div class="col col-field">
+	    											<div class="form-check">
+													  <input class="form-check-input" type="radio" name="freq-unica-hora" id="freq-unica-hora1">
+													  <label class="form-check-label" for="freq-unica-hora1">
+													    <strong>Flexible.</strong> Entre las 9 y las 16hs. <span class="descuento">-10%</span>
+													  </label>
+													</div>
+													<div class="form-check">
+													  <input class="form-check-input" type="radio" name="freq-unica-hora" id="freq-unica-hora2">
+													  <label class="form-check-label" for="freq-unica-hora2">
+													    <strong>Franja horaria específica</strong>
+													  </label>
+													  <select class="form-select franja-horaria" aria-label="Franja horaria específica">
+														  <option selected>Elegir franja</option>
+														  <option value="1">franja 1</option>
+														  <option value="2">franja 2</option>
+														  <option value="3">franja 3</option>
+														</select>
+													</div>
+	    										</div>
+	    									</div>
+	    								</div>
+	    								<div class="frequency-form" id="freq-suscripcion">
+	    									<p><strong>Seleccioná los días de la semana que necesitás el servicio:</strong></p>
+	    									<p>Obtendrás un 10% de descuento si contratás una vez por semana, 15% si contratás 2 veces por semana, y 20% si contratás 3 veces por semana!</p>
+	    									<div class="row">
+	    										<div class="col-4 col-lg-2">
+	    											<input type="checkbox" name="freq-suscr-dia" class="btn-check" id="freq-suscr-dia-lu" autocomplete="off">
+	    											<label class="btn btn-outline-form" for="freq-suscr-dia-lu">Lun</label>
+	    										</div>
+	    										<div class="col-4 col-lg-2">
+	    											<input type="checkbox" name="freq-suscr-dia" class="btn-check" id="freq-suscr-dia-ma" autocomplete="off">
+	    											<label class="btn btn-outline-form" for="freq-suscr-dia-ma">Mar</label>
+	    										</div>
+	    										<div class="col-4 col-lg-2">
+	    											<input type="checkbox" name="freq-suscr-dia" class="btn-check" id="freq-suscr-dia-mi" autocomplete="off">
+	    											<label class="btn btn-outline-form" for="freq-suscr-dia-mi">Mie</label>
+	    										</div>
+	    										<div class="col-4 col-lg-2">
+	    											<input type="checkbox" name="freq-suscr-dia" class="btn-check" id="freq-suscr-dia-ju" autocomplete="off">
+	    											<label class="btn btn-outline-form" for="freq-suscr-dia-ju">Jue</label>
+	    										</div>
+	    										<div class="col-4 col-lg-2">
+	    											<input type="checkbox" name="freq-suscr-dia" class="btn-check" id="freq-suscr-dia-vi" autocomplete="off">
+	    											<label class="btn btn-outline-form" for="freq-suscr-dia-vi">Vie</label>
+	    										</div>
+	    										<div class="col-4 col-lg-2">
+	    											<input type="checkbox" name="freq-suscr-dia" class="btn-check" id="freq-suscr-dia-sa" autocomplete="off">
+	    											<label class="btn btn-outline-form" for="freq-suscr-dia-sa">Sab</label>
+	    										</div>
+	    									</div>
+	    									<div class="row dia-visita">
+	    										<div class="col-lg-2 col-3 col-label">
+	    											<label for="freq-unica-dia" class="h4">Día</label>
+	    										</div>
+	    										<div class="col col-field">
+	    											<!-- Contemplar posibilidad de incluir un datepicker de react -->
+													<input type="date" name="freq-unica-dia" class="form-control">
+	    										</div>
+	    									</div>
+	    									<div class="row franja-horaria">
+	    										<div class="col-lg-2 col-3 col-label">
+	    											<label for="freq-unica-hora" class="h4">Horario</label>
+	    										</div>
+	    										<div class="col col-field">
+	    											<div class="form-check">
+													  <input class="form-check-input" type="radio" name="freq-unica-hora" id="freq-unica-hora1">
+													  <label class="form-check-label" for="freq-unica-hora1">
+													    <strong>Flexible.</strong> Entre las 9 y las 16hs. <span class="descuento">-10%</span>
+													  </label>
+													</div>
+													<div class="form-check">
+													  <input class="form-check-input" type="radio" name="freq-unica-hora" id="freq-unica-hora2">
+													  <label class="form-check-label" for="freq-unica-hora2">
+													    <strong>Franja horaria específica</strong>
+													  </label>
+													  <select class="form-select franja-horaria" aria-label="Franja horaria específica">
+														  <option selected>Elegir franja</option>
+														  <option value="1">franja 1</option>
+														  <option value="2">franja 2</option>
+														  <option value="3">franja 3</option>
+														</select>
+													</div>
+	    										</div>
+	    									</div>
+	    								</div>
+	    								<div class="frequency-form" id="freq-urgencia">
+	    									<div class="dev-note">
+	    										Esto es igual en formato a la frecuencia única. Probablemente sólo aplique para usuarios registrados y esté deshabilitado para otros. Consultar reglas de negocio al cliente.
+	    									</div>
+	    									<div class="row dia-visita">
+	    										<div class="col-lg-2 col-3 col-label">
+	    											<label for="freq-unica-dia" class="h4">Día</label>
+	    										</div>
+	    										<div class="col col-field">
+	    											<!-- Contemplar posibilidad de incluir un datepicker de react -->
+													<input type="date" name="freq-unica-dia" class="form-control">
+	    										</div>
+	    									</div>
+	    									<div class="row franja-horaria">
+	    										<div class="col-lg-2 col-3 col-label">
+	    											<label for="freq-unica-hora" class="h4">Horario</label>
+	    										</div>
+	    										<div class="col col-field">
+	    											<div class="form-check">
+													  <input class="form-check-input" type="radio" name="freq-unica-hora" id="freq-unica-hora1">
+													  <label class="form-check-label" for="freq-unica-hora1">
+													    <strong>Flexible.</strong> Entre las 9 y las 16hs. <span class="descuento">-10%</span>
+													  </label>
+													</div>
+													<div class="form-check">
+													  <input class="form-check-input" type="radio" name="freq-unica-hora" id="freq-unica-hora2">
+													  <label class="form-check-label" for="freq-unica-hora2">
+													    <strong>Franja horaria específica</strong>
+													  </label>
+													  <select class="form-select franja-horaria" aria-label="Franja horaria específica">
+														  <option selected>Elegir franja</option>
+														  <option value="1">franja 1</option>
+														  <option value="2">franja 2</option>
+														  <option value="3">franja 3</option>
+														</select>
+													</div>
+	    										</div>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    					<div class="wizard-footer">
+	    						<div class="inner-container">
+	    							<div class="calc-superficie">
+	    								Superficie aprox.: <strong class="superficie">64m<sup>2</sup></strong>
+	    							</div>
+	    							<div class="calc-precio">
+	    								<span class="currency">$</span><strong class="precio">150</strong> <span class="small">por visita.</span>
+	    							</div>
+	    							<button class="btn btn-primary">Siguiente</button>	
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 logo">
+						<img src="/img/logo-small@2x.jpg" alt="Joya" class="img-fluid" width="85" height="31">
+						<p class="copy">© 2021 Joya</p>
+					</div>
+					<div class="col-md-10 link-blocks">
+						<div class="row">
+							<div class="col col-lg-4 link-block">
+								<p class="title">Servicio</p>
+								<ul>
+									<li><a href="#">Contratá JOYA</a></li>	
+									<li><a href="#">Política de cancelación</a></li>
+									<li><a href="#">Ayuda</a></li>
+									<li><a href="#">Términos y condiciones</a></li>
+									<li><a href="#">Política de privacidad</a></li>
+								</ul>
+					
+							</div>
+							<div class="col col-lg-4 link-block">
+								<p class="title">Nosotros</p>
+								<ul>
+									<li><a href="#">Sobre nosotros</a></li>
+									<li><a href="#">Convertite en vidrierista JOYA</a></li>
+								</ul>
+							
+							</div>
+							<div class="col col-lg-4 link-block">
+								<p class="title">Contacto</p>
+								<ul>
+									<li>
+										<i class="far fa-envelope"></i>
+										<a href="mailto:ayuda@joya.com">ayuda@joya.com</a>
+									</li>
+									<li>
+										<i class="far fa-phone"></i>
+										<a href="tel:+5491145674568">011.4567.4568</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	
+	<script type="text/javascript" src="/dist/js/bundle.js"></script>
+</body>
+</html>

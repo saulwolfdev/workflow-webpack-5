@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+	
+<head>
+	<link rel="manifest" href="webmanifest.manifest"> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Joya - Homepage con login</title>
+	<meta name="title" content="Joya - Homepage con login">
+	<meta name="description" content="Lorem ipsum sid dolor amet" />
+
+	<!--<base href="file:///D:/BitBucket%20Repos/joya-front-end/">-->
+
+	<link rel="icon" href="/assets/favicons/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="/assets/favicons/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><!-- 180×180 -->
+	
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+	<link href="/assets/fonts/fontawesome-pro-5.7.2-web/css/all.min.css" rel="stylesheet">
+</head>
+<body class="">
+	<div id="wrapper">
+		<div class="overlay"></div>
+		<header class="fixed-top-scroll fixed-top">
+	        <nav class="navbar">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-auto logo-div">
+	                        <h1 class="site-title">
+	                            <a class="navbar-brand main-logo" href="#" rel="home" style="background-image: url('/img/logo@2x.png');">Joya</a>
+	                        </h1>
+	                    </div>
+	                    <!-- NOTA: sólo uno de los user-navs va a estar presente en el HTML en cada momento, esto será manejado según esté logueado o no el usuario. La técnica de ocultar uno de los menúes con css es únicamente para la maqueta -->
+	                    <!-- NOTA: sólo uno de los user-navs va a estar presente en el HTML en cada momento, esto será manejado según esté logueado o no el usuario. La técnica de ocultar uno de los menúes con css es únicamente para la maqueta -->
+	                    <div class="col menu-col user-nav">
+	                    	<button class="navbar-toggler user-toggle hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu-user" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                				<span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+						         	<ul class="menu user-menu">
+						         		<li class="username d-lg-none"><span class="a">
+		                        			<i class="far fa-user-circle"></i>
+		                        			Carolina	                        			
+		                        		</span></li>
+		                        		<li class="ayuda"><a href="#">Ayuda</a></li>
+		                        		<li><a href="#" class="destacado">Solicitar limpieza de vidriera</a></li>
+		                        		<li class="separator"></li>
+		                        		<li class="user-item"><a href="#">Tus pedidos</a></li>
+		                        		<li class="user-options dropdown closed">
+		                        			<span class="a user-item">
+		                        				<i class="far fa-user-circle"></i>
+		                        				Carolina
+		                        				<i class="far fa-chevron-down"></i>
+		                        			</span>
+		                        			<ul class="sub-menu">
+		                        				<li><a href="#">Tus pedidos</a></li>
+		                        				<li><a href="#">Configuración de cuenta</a></li>
+		                        				<li><a href="#">Salir</a></li>
+		                        			</ul>
+		                        		</li>
+		                        	</ul>
+		                        </div>
+		                    </nav>
+	                    </div>
+	                    <div class="col menu-col public-nav">
+	                        <button class="navbar-toggler hamburger is-closed" type="button" data-toggle="offcanvas" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+	                            <span class="hamb-top"></span>
+	                            <span class="hamb-middle"></span>
+	                            <span class="hamb-bottom"></span>
+	                        </button>
+	                        
+	                        <nav class="navbar navbar-inverse navbar-fixed-top" id="main-menu" role="navigation">
+	                            <div class="nav sidebar-nav col">
+	                            	<ul class="menu public-menu">
+	                            		<li><a href="#">Ayuda</a></li>
+	                            		<li><a href="#" class="destacado">Solicitar limpieza de vidriera</a></li>
+	                            		<li class="separator"></li>
+	                            		<li><a href="#" class="destacado">Iniciar sesión</a></li>
+	                            	</ul>
+
+	                            </div>
+	                        </nav>
+	                    </div>
+	                </div>
+	            </div>
+	        </nav>
+	    </header>
+	    <div class="main-content">
+	    	<div class="hero">
+	    		<div class="container-fluid">
+	    			<div class="row">
+	    				<div class="col-lg-6 col-md-9 hero-content">
+	    					<h1>Tus vidrieras siempre limpias</h1>		
+	    					<p>Solicitá tu servicio, desde $50 la limpieza.</p>
+	    					<div class="form form-rounded">
+	    						<label for="direccion" class="form-label sr-only">Dirección de tu vidriera</label>
+	    						<div class="input-group-btn">
+	    							<input type="text" class="form-control" id="direccion" aria-describedby="direccionHelp" placeholder="Dirección de tu vidriera">
+	    							<button class="btn btn-secondary btn-round" aria-label="Solicitar limpieza ya"><i class="far fa-arrow-right"></i></button>
+	    						</div>
+    							
+    							<div id="direccionHelp" class="form-text">Servicio para Capital Federal únicamente. Pronto tendremos más cobertura.</div>
+    							
+	    					</div>
+	    				</div>
+	    			</div>
+	    			
+	    		</div>
+	    	</div>
+	    	<div class="home-steps section">
+	    		<div class="container-fluid">
+	    			<div class="row">
+	    				<div class="col step">
+	    					<!--<div class="inner">-->
+		    					<div class="num">01</div>
+		    					<div class="img-block"><img class="img-fluid" src="/img/step1.jpg" alt="Solicitá un vidrierista" width="80" height="67"></div>
+		    					<div class="text">
+		    						<h4>Solicitá un vidrierista</h4>
+		    						<p>indicando ubicación, tamaño de la vidriera.</p>
+		    					</div>
+		    				<!--</div>-->
+	    				</div>
+	    				<div class="col step">
+	    					<!--<div class="inner">-->
+		    					<div class="num">02</div>
+		    					<div class="img-block"><img class="img-fluid" src="/img/step2.jpg" alt="Elegí día, horario y frecuencia" width="67" height="68"></div>
+		    					<div class="text">
+		    						<h4>Vos elegís día, horario y frecuencia</h4>
+		    						<p>Los días que quieras, a la hora que quieras.</p>
+		    					</div>
+		    				<!--</div>-->
+	    				</div>
+	    				<div class="col step">
+	    					<!--<div class="inner">-->
+		    					<div class="num">03</div>
+		    					<div class="img-block"><img class="img-fluid" src="/img/step3.jpg" alt="Pago seguro" width="76" height="67"></div>
+		    					<div class="text">
+		    						<h4>Pagá de forma segura</h4>
+		    						<p>con tu tarjeta de crédito o adhieriéndote al débito automático.</p>
+		    					</div>
+		    				<!--</div>-->
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="section">
+	    		<div class="container-fluid">
+		    		<div class="dev-note">De los botones a continuación se debe tomar <code>data-bs-target</code> y <code>data-bs-toggle</code> a fin de activar los modales de registro y login. Esto se podrá aplicar a elementos tipo <code>buttton</code> o <code>a</code>. Los links que aparecen al final de cada modal ("No tenés cuenta? Registrate") cierran el modal que está abierto y abren otro. En ese caso hay que incluir el atributo <code>data-bs-modal-dismiss</code></div>
+
+		    		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+		    		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroModal">Registrate</button>
+		    	</div>
+	    	</div>
+	    </div>
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 logo">
+						<img src="/img/logo-small@2x.jpg" alt="Joya" class="img-fluid" width="85" height="31">
+						<p class="copy">© 2021 Joya</p>
+					</div>
+					<div class="col-md-10 link-blocks">
+						<div class="row">
+							<div class="col col-lg-4 link-block">
+								<p class="title">Servicio</p>
+								<ul>
+									<li><a href="#">Contratá JOYA</a></li>	
+									<li><a href="#">Política de cancelación</a></li>
+									<li><a href="#">Ayuda</a></li>
+									<li><a href="#">Términos y condiciones</a></li>
+									<li><a href="#">Política de privacidad</a></li>
+								</ul>
+					
+							</div>
+							<div class="col col-lg-4 link-block">
+								<p class="title">Nosotros</p>
+								<ul>
+									<li><a href="#">Sobre nosotros</a></li>
+									<li><a href="#">Convertite en vidrierista JOYA</a></li>
+								</ul>
+							
+							</div>
+							<div class="col col-lg-4 link-block">
+								<p class="title">Contacto</p>
+								<ul>
+									<li>
+										<i class="far fa-envelope"></i>
+										<a href="mailto:ayuda@joya.com">ayuda@joya.com</a>
+									</li>
+									<li>
+										<i class="far fa-phone"></i>
+										<a href="tel:+5491145674568">011.4567.4568</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	
+	<script type="text/javascript" src="/dist/js/bundle.js"></script>
+</body>
+</html>
+
+<div class="modal fade accountModal" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        <h4>Estás a un paso de tus vidrieras limpias</h4>
+        <p>Completá tus datos para terminar de registrar tu pedido.</p>
+
+        <form class="form">
+        	<div class="row">
+        		<div class="col form-element">
+					<label for="nombre" class="form-label">Nombre</label>
+					<input type="text" class="form-control" name="nombre">
+				</div>
+				<div class="col form-element">
+					<label for="apellido" class="form-label">Apellido</label>
+					<input type="text" class="form-control" name="apellido">
+				</div>
+        	</div>
+        	<div class="form-element">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" class="form-control" name="email">
+			</div>
+			<div class="form-element">
+				<label for="password" class="form-label">Contraseña</label>
+				<input type="password" class="form-control invalid" name="password">
+				<div class="error-msg"><i class="far fa-exclamation-circle"></i> Las contraseñas no coinciden</div>
+			</div>
+			<div class="form-element">
+				<p><input type="checkbox" />Quiero recibir novedades</p>
+			</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Registrarme</button>
+        <p>Ya tenés cuenta en Joya? <a href="#"  data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal">Ingresá</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade accountModal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        <h4>Estás a un paso de tus vidrieras limpias</h4>
+        <p>Accedé a tu cuenta para registrar tu pedido.</p>
+
+        <form class="form">
+        	<div class="form-element">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" class="form-control" name="email">
+			</div>
+			<div class="form-element">
+				<label for="password" class="form-label">Contraseña</label>
+				<input type="password" class="form-control" name="password">
+			</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Ingresar</button>
+        <p>No tenés cuenta en Joya aún? <a href="#" data-bs-target="#registroModal" data-bs-toggle="modal" data-bs-dismiss="modal">Registrate</a> </p>
+      </div>
+    </div>
+  </div>
+</div>

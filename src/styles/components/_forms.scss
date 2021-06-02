@@ -1,0 +1,90 @@
+
+$form-range-track-height:         4px;
+
+$form-range-track-bg:             rgba($text-dark, 0.5);
+$form-range-track-border-radius:  $form-range-track-height/2;
+
+
+$form-range-thumb-width:                   18px;
+$form-range-thumb-height:                  $form-range-thumb-width;
+$form-range-thumb-bg:                      $c-primary;
+$form-range-thumb-border:                  0;
+$form-range-thumb-border-radius:           50%;
+$form-range-thumb-box-shadow:              0 .1rem .25rem rgba(green, .1);
+
+$form-range-thumb-active-bg:               $c-primary;
+
+
+$form-radius: 2px; 
+$form-single-line-height: 40px;
+
+.form-control {
+	border-radius: $form-radius; 
+	border-color: $border-color;
+}
+.form-text {
+	font: 400 14px $font;
+    margin-bottom: 0; 
+    margin-top: 0.75rem;
+    color: $text-dark;
+}
+.form-element {
+    padding-bottom: 22px; 
+}
+.input-group-btn {
+	position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+
+    .btn-round {
+    	position: absolute; 
+    	z-index: 2;
+    	right: 0px; top: 0px; 
+    	margin: 0; 
+    	
+    }
+}
+.input-group {
+    .input-group-text {
+        background-color: transparent; 
+        z-index: 1;
+        &:first-child {border-right: none; padding-right: 0;}
+        &:last-child {border-left: none;}
+
+    }
+    .form-control {
+        &:first-child {border-right: none;}
+        &:last-child {border-left: none;}
+    }
+}
+.form-rounded {
+    input.form-control {
+        height: $btn-height-big;  
+        border-radius: $btn-height-big/2; 
+        padding-right: $btn-height-big/3;
+        padding-left: $btn-height-big/3;
+        margin: 1.5rem 0;
+    }
+}
+input[type=range] {
+
+    &::-moz-range-progress {
+      background-color: $c-primary; 
+    }
+    &::-moz-range-track {  
+      background-color: rgba($text-dark, 0.5);
+    }
+    /* IE*/
+    &::-ms-fill-lower {
+      background-color: $c-primary; 
+    }
+    &::-ms-fill-upper {  
+      background-color: rgba($text-dark, 0.5);
+    }
+}
+
+.form .label {@extend label; } 
+
+input[type=checkbox] {margin-right: 8px; }

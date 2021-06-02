@@ -1,0 +1,216 @@
+.hero {
+	background-image: url("../assets/img/hero-vidrieristas.jpg"); 
+	padding: 75px 0; 
+	@media (max-width: $end-sm) {
+		h1 {font-size: 40px; }
+		p {font-size: 20px; }
+	}
+	.hero-content {
+		padding-top: 0;
+		padding-bottom: 40px; 
+	}
+	/*p {
+		font: 400 30px/45px $font-display; 
+	}*/
+	p.small { 
+		font: 400 16px/1.5em $font; 
+	}
+	.form-vidrierista {
+		.form-container {
+			@include bg-light;
+			
+			padding: 34px 43px;
+			margin: 0 auto 30px; 
+			p {
+				font: 400 14px/19px $font; 
+			}
+		}
+		.form-element p {margin-bottom: 0; }
+		.input-group-text {color: $text-dark-secondary; }
+		.btn {width: 100%; margin-top: 0; }
+
+
+	}	
+	@media (min-width: $start-lg) {
+		.hero-content {
+			padding-top: 70px;
+			padding-bottom: 70px; 
+		}
+		.form-vidrierista .form-container {
+			padding: 54px 63px;
+			max-width: 465px; 
+		}
+	}
+
+}
+.home-beneficios-vidrierista {
+	padding-top: 65px; 
+	h3 {
+		max-width: 690px; 
+		font-weight: 400; 
+		padding-bottom: 65px; 
+
+		strong {font-weight: 600; }
+	}
+	.beneficio-vidrierista {
+		padding-bottom: 35px; 
+		display: flex; flex-direction: row;
+
+		.img-block {
+			width: 113px; 
+			max-width: 30%;
+			flex-shrink: 0; 
+		}
+		/*.text {
+			padding: 0 20px; 
+		}*/
+	}
+	@media (max-width: $end-sm) {
+		.img-block {
+			padding-right: 15px; 
+		}
+	}
+	@media (min-width: $start-sm) and (max-width: $end-md) {
+		.beneficio-vidrierista {
+			 flex-direction: column;
+			.img-block {
+				height: 80px; width: auto; max-width: 100%;
+				margin: 0 20px 20px;
+				.img-fluid {
+					max-height: 100%; width: auto; max-width: none;
+				}
+			}
+		}
+	}
+	@media (min-width: $start-md) {
+		.text {
+			padding: 0 20px; 
+		}
+	}
+	@media (min-width: $start-lg) {
+		padding-top: 95px; 
+		.beneficio-vidrierista {
+			flex-direction: row;
+			.img-block {
+				
+				width: auto;
+				
+				.img-fluid {
+						width: auto;
+				}
+			}
+		}
+
+	}
+}
+.home-simple {
+	
+	.subscription-form {
+		padding-top: 20px; 
+	} 
+	.miscelaneas {
+		position: relative; 
+		max-width: 33%; 
+		
+	}
+	@media (max-width: $end-sm) {
+		padding-top: 0; 
+	}
+	@media (min-width: $start-lg) {
+		.miscelaneas {
+			max-width: none; 
+			
+		}
+		.celular {
+			position: absolute;  top: 40px; right: -30px;
+			max-width: 33%;
+		}
+	}
+	@media (min-width: $start-xl) {
+		.main-content {padding-top: 35px; }
+		.miscelaneas {
+				
+				padding-bottom: 38px; padding-right: 38px; 
+				.celular {
+					bottom: 0; top: auto; 
+
+				}
+			}
+	}
+}
+
+.home-faq {
+	background: transparent url("../assets/img/bg-pedido.jpg") no-repeat center top; 
+	
+	h3 {font-weight: normal; padding-bottom: 24px;}
+	.faq-container {
+		padding: 30px; 
+		box-shadow: 0px 33px 36px 6px rgba(0,0,0,0.06);
+		border-radius: 9px; 
+		@include bg-light; 
+		margin-bottom: 70px; 
+	}
+	
+	
+
+	
+	
+	.accordion-item {
+		$accordion-spacing-left: 20px; 
+		margin-left: $accordion-spacing-left;
+		.accordion-button {
+			background-color: transparent; 
+			//font-weight: 600; 
+			color: $text-dark; 
+			padding: 6px 0;
+			justify-content: flex-end;
+    		flex-direction: row-reverse;
+    		font: 600 16px/1.5em $font-display;
+
+    		&::after {
+    			position: relative; left: -1 * $accordion-spacing-left; 
+    			margin-left: 0; 
+    			background-image: none; 
+    			font: 400 14px/20px $font-icons; 
+    			content: "\f078";
+    			width: auto; 
+    			height: auto; 
+    		}
+    		&:not(.collapsed)::after {
+    			//content: "\f078";
+    			
+    		}
+
+			&.collapsed {
+//				font-weight: normal; 
+			}
+		}
+	}
+	@media (min-width: $start-md) {
+		background: transparent url('../assets/img/faq.jpg') no-repeat right 50px; 
+		.faq-container {
+			padding: 70px; 
+		}
+		.accordion-item {
+			$accordion-spacing-left-md: 48px; 
+			margin-left: $accordion-spacing-left-md;
+			.accordion-button {
+				font-size: 20px; 
+	    		&::after {
+	    			left: -1 * $accordion-spacing-left-md; 
+	    			font-size: 18px; 
+	    		}
+	    	}
+	    }
+	}
+	@media (min-width: $start-lg) {}
+}
+
+.home-vidrieristas {
+	/*padding-top: 45px; 
+	box-shadow: 0px 53px 36px 6px rgba(0,0,0,0.06);*/
+	
+
+}
+
+

@@ -1,0 +1,29 @@
+
+.home-vidrieristas {
+	padding-top: 45px; 
+	text-align: center; 
+	.container-fluid {
+		//border-radius: 30px; 
+		padding: 50px;
+		box-shadow: 0px 53px 36px 6px rgba(0,0,0,0.06);
+	}
+	.content {
+		align-self: center; 
+		p {font: 22px/40px $font; }
+	}
+	.misc { padding-right: 40px; padding-bottom: 1rem; }
+
+
+	@media (end-width: $end-sm) {
+		.misc {
+			padding-bottom: 3rem; 
+		}
+	}
+	@media (min-width: $start-md) {
+		text-align: left; 
+		
+	}
+	@media (min-width: $start-lg) {
+		.container-fluid {	border-radius: 30px; }
+	}
+}

@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="es">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Joya - Styleguide</title>
+	<meta name="title" content="Joya - Styleguide">
+	<meta name="description" content="Lorem ipsum sid dolor amet" />
+
+
+	<link rel="icon" href="/img/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png"><!-- 180×180 -->
+	<link rel="manifest" href="/manifest.webmanifest">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<link href="/assets/fonts/fontawesome-pro-5.7.2-web/css/all.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="/dist/styleguide.css">
+
+</head>
+<body>
+	<div id="wrapper">
+		<div class="intro-heading">
+			<div class="container">
+				<div class="row">
+					<h3 class="col justify-content-start">JOYA - UI Style Guide</h3>
+					<span class="justify-content-end">Version 1.0</span>
+				</div>
+			</div>
+		</div>
+		<div class="section color-section container">
+			<p class="h1">1. Color</p>
+			<p class="h3">Colores principales</p>
+			<div class="row">
+				<div class="col-md-8">
+					<p>The primary color is the color displayed most frequently across the platform and components. <br>
+					The secondary color is used to accent select parts of the UI such as buttons, floating acition buttons and progress bars. Each color has a corresponding gradient used for backgrounds. </p>
+					<p>Base Colors are used for background of the Chat area.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 color-block">
+					<p class="h3">Primario</p>
+					<div class="row mx-0">
+						<div class="square-color primary-color-block col-12">
+							.primary-color-block
+							<br>@include primary-color-block;
+							<p class="note">$c-primary + $text-light</p>
+						</div>
+						<!--<div class="primary-color-block col-12">
+							
+						</div>-->
+					</div>
+				</div>
+				<div class="col-md-4 color-block">
+					<p class="h3">Secundario</p>
+					<div class="row mx-0">
+						<div class="square-color secondary-color-block col-12">
+							.secondary-color-block
+							<br>@include secondary-color-block;
+							<p class="note">$c-secondary + $text-dark</p>
+						</div>
+						<!--<div class="secondary-gradient col-12">
+							<strong>.secondary-gradient</strong>
+							<br>&nbsp;
+						</div>-->
+					</div>
+				</div>
+				
+				<div class="col-md-4 color-block base-colors">
+					<p class="h3">Fondos</p>
+					<div class="row mx-0">
+						<div class="bg-block bg-light">
+							<strong>.bg-light</strong>
+							<br>@include bg-light
+							<p class="note">$bg-light + $text-dark</p>
+						</div>
+						<div class="bg-block bg-light-1">
+							<strong>.bg-light-1</strong>
+							<br>@include bg-light-1
+							<p class="note">$bg-light-1 + $text-dark</p>
+						</div>
+						<div class="bg-block bg-dark">
+							<strong>.bg-dark</strong>
+							<br>@include bg-dark
+							<p class="note">$bg-dark + $text-light</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sub-section gradients">
+				<p class="h3">Gradientes</p>
+				<div class="row">
+					<div class="col-md-5">
+						<div class="square-color primary-gradient">
+							@include primary-gradient
+							<br>.primary-gradient
+							<p class="note">&nbsp;</p>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="square-color primary-gradient-overlay">
+							@include primary-gradient-overlay
+							<br>.primary-gradient-overlay
+							<p class="note">Use on images, in a :before or :after block</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="row mx-0">
+				<div class="col-12 gradient-block">
+					<p class="h3">Gradients</p>
+					<p>Each step of the conversational form will have a different gradient. There are 7 gradients available that differ from the Main Gradient. If a Legal Document has more than 7 steps, the following steps will repeat the gradient cycle.</p>
+					<div class="row">
+						<div class="col gradient-1">.gradient-1</div>
+						<div class="col gradient-2">.gradient-2</div>
+						<div class="col gradient-3">.gradient-3</div>
+						<div class="col gradient-4">.gradient-4</div>
+						<div class="col gradient-5">.gradient-5</div>
+						<div class="col gradient-6">.gradient-6</div>
+						<div class="col gradient-7">.gradient-7</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+		<div class="section typography-section container">
+			<p class="h1">2. Tipografía</p>
+			<!--<div class="row">
+				<div class="col-md-6 light-background">
+					<p><strong>.light-background</strong></p>
+					<p>
+						<span class="primary">.primary / $on-light-primary-text</span><br>
+						<span class="secondary">.secondary / $on-light-secondary-text</span><br>
+						<span class="disabled">.disabled / $on-light-disabled-text</span>
+					</p>
+				</div>
+				<div class="col-md-6 dark-background">
+					<p><strong>.dark-background</strong></p>
+					<p>
+						<span class="primary">$on-dark-primary-text</span><br>
+						<span class="secondary">$on-dark-secondary-text</span><br>
+						<span class="disabled">$on-dark-disabled-text</span>
+					</p>
+				</div>
+			</div>-->
+			<div class="font-families sub-section">
+				<p class="h3">Familias tipográficas</p>
+				<div class="row">
+					<div class="col-md-6">
+						<p class="h2">Bai Jamjuree</p>
+						<p><a class="caption" href="https://fonts.google.com/specimen/Bai+Jamjuree">Google Font</a></p>
+					</div>
+					<div class="col-md-6">
+						<p class="h2 font-text">Source Sans Pro</p>
+						<p><a class="caption" href="https://fonts.google.com/specimen/Source+Sans+Pro">Google Font</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="heading-chart sub-section">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="h3">Títulos</p>
+						<div class="heading">
+							<h1>h1 heading</h1>
+							<p class="note">Bai Jamjuree - Semibold - 44px/50px.</p>
+						</div>
+						<div class="heading">
+							<h2>h2 heading</h2>
+							<p class="note">Bai Jamjuree - Bold - 52px/54px.</p>
+						</div>
+						<div class="heading">
+							<h3>h3 heading</h3>
+							<p class="note">Bai Jamjuree - Bold - 30px/36px.</p>
+						</div>
+						<div class="heading">
+							<h4>h4 heading</h4>
+							<p class="note">Bai Jamjuree - Bold - 20px/27px.</p>
+						</div>
+						
+					</div>
+					<div class="col-md-6">
+						<p class="h3">Otros estilos</p>
+						<div class="heading">
+							<p class="label">p.label</p>
+							<p class="note">Source Sans Pro - Regular - 14px/19px.</p>
+						</div>
+						<div class="heading">
+							<p class="label c-error">.c-error</p>
+							<p class="label c-success">.c-success</p>
+						</div>
+						<!--<p class="big-subtitle-caption">.big-subtitle-caption</p>
+						<p class="step-title">.step-title</p>
+						<p class="main-body">.main-body / or no class at all</p>
+						<p class="button">.button</p>
+						<p class="chat-body">.chat-body</p>
+						<p class="caption">.caption</p>
+						<p class="caption-small">.caption-small</p>-->
+					</div>
+				</div>							
+			</div>
+		</div>
+		<div class="section icons-section container">
+			<p class="h1">3. Iconos</p>
+			<div class="row">
+				<div class="col-md-8">
+					<p><strong>Font Awesome Pro 5.7.2</strong> está disponible. Variantes cargadas: todas. Según los íconos que se usen, se evaluará reducir las variantes cargadas al finalizar el proyecto.</p>
+					<p>Los íconos que se muestran a continuación son los que se han usado ya en el proyecto. Si se desea utilizar un ícono nuevo, agregarlo a esta lista primero.</p>
+				</div>
+			</div>
+			<div class="row sub-section">
+				<div class="col-md-4">
+					<h4>Font Awesome Pro Solid</h4>
+					<p class="icons">
+						<i class="fas fa-star"></i><!-- Admin calificaciones -->
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h4>Font Awesome Pro Regular</h4>
+					<p class="icons">
+						<i class="far fa-arrow-right"></i>
+						<i class="far fa-envelope"></i>
+						<i class="far fa-phone"></i>
+						<i class="far fa-user-circle"></i>
+						<i class="far fa-chevron-down"></i>
+						<i class="far fa-map-marker-alt"></i>
+						<i class="far fa-arrows-v"></i>
+						<i class="far fa-arrows-h"></i>
+						<i class="far fa-times"></i>
+						<i class="far fa-exclamation-circle"></i>
+						<i class="far fa-bell"></i>
+
+						<!-- Admin -->
+						<i class="far fa-ellipsis-h"></i> 
+						<i class="far fa-check-circle"></i><i class="far fa-check-circle c-success"></i>
+						<i class="far fa-exclamation-triangle"></i><i class="far fa-exclamation-triangle c-error"></i>
+						<i class="far fa-th"></i>
+						<i class="far fa-th-list"></i>
+						<i class="far fa-download"></i>
+
+
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h4>Font Awesome Pro Light</h4>
+					<p class="icons">					
+						<i class="fal fa-store"></i>
+						<i class="fal fa-calendar-alt"></i>
+						<i class="fal fa-credit-card"></i>
+						<i class="fal fa-envelope"></i>
+						<i class="fal fa-user-circle"></i>
+						<i class="fal fa-mobile-android-alt"></i>
+
+						<!--<i class="far fa-file-alt"></i>
+						<i class="far fa-cog"></i>
+						<i class="far fa-balance-scale"></i>
+						<i class="far fa-question"></i>
+						<i class="far fa-sign-out"></i>-->
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h4>Font Awesome Pro Brands</h4>
+					<p>None in use yet. </p>
+					<p class="icons">
+						<!--<i class="far fa-times"></i>
+						<i class="far fa-plus"></i>
+						<i class="far fa-arrow-left"></i>
+						<i class="far fa-arrow-right"></i>
+						<i class="far fa-bars"></i>-->
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="section buttons-section container ">
+			<p class="h1">4. Botones</p>
+
+			<p> Primary buttons have two functions - as the main call to action for users, and as an action that normally completes the user's task. </p>
+			<p> A disabled button is used for telling users that an action is available, but not at the moment. </p>
+			<p> Secondary buttons serve as cues for optional actions that user can take. </p>
+			<p> Tertiary icons are text links. </p>
+			<p> Floating Action buttons are associated to users documents, and stick to their position as the user scrolls. </p>
+			
+			<div class="light-background">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="sub-section">
+							<h3>Tamaños</h3>
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-big btn-primary">.btn.btn-big (60px)</button>
+									<button class="btn btn-primary">.btn (50px)</button>
+									<button class="btn btn-small btn-primary">.btn.btn-small (40px)</button>
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="sub-section">
+							<h3>Estilos</h3>
+							<div class="row">
+								<div class="col-md-3">
+									<h4>Normal</h4>
+									<button class="btn btn-primary">Primary</button>
+									<br>
+									<button class="btn btn-secondary"> Secondary </button>
+									<br>
+									<a class="btn btn-tertiary"> Tertiary </a>
+									<br>
+									<button class="btn btn-outline">Outline</button>
+								</div>
+								<div class="col-md-3">
+									<h4>Normal .btn-round</h4>
+									<button class="btn btn-primary btn-round"><i class="far fa-arrow-right"></i></button><br>
+									<button class="btn btn-secondary btn-round"><i class="far fa-arrow-right"></i></button><br>
+									
+								</div>
+								<div class="col-md-3">
+									<h4>Disabled</h4>
+									<button class="btn btn-primary disabled secondary-gradient"> Primary </button><br>
+									<button class="btn btn-secondary disabled"> Secondary </button><br>
+									<a class="btn btn-tertiary disabled"> Tertiary </a>
+									<br><button class="btn btn-outline disabled">Outline</button>
+								</div>
+								<div class="col-md-3">
+									<h4>Disabled .btn-round</h4>
+									<button class="btn btn-primary btn-round disabled"><i class="far fa-arrow-right"></i></button><br>
+									<a class="btn btn-secondary btn-round disabled"><i class="far fa-arrow-right"></i></a><br>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>				
+			</div>
+		</div>
+		<div class="section forms-section container ">
+			<p class="h1">4. Forms</p>
+			<div class="form sub-section">
+				<h2>.form</h2>
+				<h4>Inputs de texto</h4>
+				<p>Vale para inputs email, password, text, etc.</p>
+
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Input de texto normal -->
+						<div class="form-element">
+							<label for="nombre_local" class="form-label">Nombre del local</label>
+							<input type="text" class="form-control" placeholder="Nombre del local..." name="nombre_local">
+						</div>
+						<!-- Input de texto normal con error-->
+						<div class="form-element">
+							<label for="nombre_local" class="form-label">Nombre del local</label>
+							<input type="text" class="form-control invalid" placeholder="Nombre del local..." name="nombre_local">
+							<div class="error-msg"><i class="far fa-exclamation-circle"></i> Las contraseñas no coinciden</div>
+						</div>
+					</div>
+				
+					<div class="col-md-6">
+						<!-- Input de texto con icono inicial y explicacion -->
+						<div class="form-element">
+							<label for="direccion" class="form-label">Dirección</label>
+							<div class="input-group">
+								<span class="input-group-text"><i class="far fa-map-marker-alt"></i></span>
+								<input type="text" class="form-control" placeholder="Dirección del local..." name="direccion">
+							</div>
+							<p class="form-text">Esta es la explicación del input. Ojo que se agrega un div.input-group que engloba a ícono e input.</p> 
+							
+						</div>
+						<!-- Input de texto con icono inicial y explicacion - Con erorr -->
+						<div class="form-element">
+							<label for="direccion" class="form-label">Dirección</label>
+							<div class="input-group invalid">
+								<span class="input-group-text"><i class="far fa-map-marker-alt"></i></span>
+								<input type="text" class="form-control invalid" placeholder="Dirección del local..." name="direccion">
+							</div>
+							<div class="error-msg"><i class="far fa-exclamation-circle"></i> Las contraseñas no coinciden</div>
+							<p class="form-text">Esta es la explicación del input. Ojo que se agrega un div.input-group que engloba a ícono e input. Este input-group también requiere la clase .invalid cuando hay error. </p> 
+							
+						</div>
+					</div>
+				</div>
+				
+				<h4>Select</h4>
+				<select class="form-select" aria-label="Franja horaria específica">
+				  <option selected="">Elegir franja</option>
+				  <option value="1">franja 1</option>
+				  <option value="2">franja 2</option>
+				  <option value="3">franja 3</option>
+				</select>
+			</div>
+			<div class="form form-rounded sub-section">
+				<h2>.form.form-rounded</h2>
+				<h4>Inputs de texto</h4>
+				<p>Vale para inputs email, password, text, etc.</p>
+
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Input de texto normal -->
+						<div class="form-element">
+							<label for="nombre_local" class="form-label">Nombre del local</label>
+							<input type="text" class="form-control" placeholder="Nombre del local..." name="nombre_local">
+						</div>
+						<!-- Input de texto normal con error-->
+						<div class="form-element">
+							<label for="nombre_local" class="form-label">Nombre del local</label>
+							<input type="text" class="form-control invalid" placeholder="Nombre del local..." name="nombre_local">
+							<div class="error-msg"><i class="far fa-exclamation-circle"></i> Las contraseñas no coinciden</div>
+						</div>
+					</div>
+				
+					<div class="col-md-6">
+						<!-- Input de texto con icono inicial y explicacion -->
+						<div class="form-element">
+							<label for="direccion" class="form-label">Dirección</label>
+							<div class="input-group">
+								<span class="input-group-text"><i class="far fa-map-marker-alt"></i></span>
+								<input type="text" class="form-control" placeholder="Dirección del local..." name="direccion">
+							</div>
+							<p class="form-text">Esta es la explicación del input. Ojo que se agrega un div.input-group que engloba a ícono e input.</p> 
+							
+						</div>
+						<!-- Input de texto con icono inicial y explicacion - Con erorr -->
+						<div class="form-element">
+							<label for="direccion" class="form-label">Dirección</label>
+							<div class="input-group invalid">
+								<span class="input-group-text"><i class="far fa-map-marker-alt"></i></span>
+								<input type="text" class="form-control invalid" placeholder="Dirección del local..." name="direccion">
+							</div>
+							<div class="error-msg"><i class="far fa-exclamation-circle"></i> Las contraseñas no coinciden</div>
+							<p class="form-text">Esta es la explicación del input. Ojo que se agrega un div.input-group que engloba a ícono e input. Este input-group también requiere la clase .invalid cuando hay error. </p> 
+							
+						</div>
+					</div>
+				</div>
+				
+				<h4>Select</h4>
+				<select class="form-select franja-horaria" aria-label="Franja horaria específica">
+				  <option selected="">Elegir franja</option>
+				  <option value="1">franja 1</option>
+				  <option value="2">franja 2</option>
+				  <option value="3">franja 3</option>
+				</select>
+			</div>
+
+
+
+			<div class="light-background">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="sub-section">
+							<h3>Tamaños</h3>
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-big btn-primary">.btn.btn-big (60px)</button>
+									<button class="btn btn-primary">.btn (50px)</button>
+									<button class="btn btn-small btn-primary">.btn.btn-small (40px)</button>
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="sub-section">
+							<h3>Estilos</h3>
+							<div class="row">
+								<div class="col-md-3">
+									<h4>Normal</h4>
+									<button class="btn btn-primary">Primary</button>
+									<br>
+									<button class="btn btn-secondary"> Secondary </button>
+									<br>
+									<a class="btn btn-tertiary"> Tertiary </a>
+									<br>
+									<button class="btn btn-outline">Outline</button>
+								</div>
+								<div class="col-md-3">
+									<h4>Normal .btn-round</h4>
+									<button class="btn btn-primary btn-round"><i class="far fa-arrow-right"></i></button><br>
+									<button class="btn btn-secondary btn-round"><i class="far fa-arrow-right"></i></button><br>
+									
+								</div>
+								<div class="col-md-3">
+									<h4>Disabled</h4>
+									<button class="btn btn-primary disabled secondary-gradient"> Primary </button><br>
+									<button class="btn btn-secondary disabled"> Secondary </button><br>
+									<a class="btn btn-tertiary disabled"> Tertiary </a>
+									<br><button class="btn btn-outline disabled">Outline</button>
+								</div>
+								<div class="col-md-3">
+									<h4>Disabled .btn-round</h4>
+									<button class="btn btn-primary btn-round disabled"><i class="far fa-arrow-right"></i></button><br>
+									<a class="btn btn-secondary btn-round disabled"><i class="far fa-arrow-right"></i></a><br>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>				
+			</div>
+		</div>
+		<div class="section dev-section container ">
+			<p class="h1">Dev tricks</p>
+
+			<p>En esta maqueta, hay algunas clases que se pueden aplicar para ver diferentes versiones de la misma pantalla. A saber: </p>
+			
+			<div class="light-background">
+				<div class="row">
+					<div class="col-md-8">
+						
+						<div class="row">
+							<div class="col-md-6">
+								<h4>Home page</h4>
+								<ul>
+									<li>Aplicar la clase <code>.dev-user-login</code> a la etiqueta <code>&#60;body&#62;</code> para alternar entre las versiones de visitante/usuario registrado del menú. Aclaración: el JS funciona visualmente, pero no deberían coexistir ambos menúes a la vez en la app.
+									</li>
+								</ul>
+								
+								
+							</div>
+							<div class="col-md-6">
+								<h4>Solicitar limpieza</h4>
+								<ul>
+									<li>Paso 1: se puede aplicar <code>.step1.localnuevo</code> o <code>.step1.localexistente</code> al elemento <code>div.clean-wizard</code>. Esto controla que se muestren diferentes bloques en el paso, que están englobados por la clase <code>.block-alternative</code>.</li>
+								</ul>
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="dist/js/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+//////////GENERALES//////////
+@import "./helpers/bootstrap";
+@import "./helpers/bootstrap-add_ons";
+@import "./helpers/variables";
+@import "./helpers/resets";
+@import "./helpers/mixins-6v";
+@import "./helpers/color-blocks";
+@import "./helpers/text"; 
+
+//////////COMPONENTES/////////
+@import "./components/header";
+@import "./components/footer";
+@import "./components/buttons";
+@import "./components/modal";
+@import "./components/forms";
+@import "./components/buttons";
+@import "./components/hero";
+@import "./components/home-vidrieristas";
+
+///////////HOME///////////////
+@import "./cliente/home";
+@import "./cliente/login"; 
+
+///////////HOME SOLICITUD/////
+@import "./cliente/solicitud-limpieza/paso1";
+@import "./cliente/solicitud-limpieza/paso2";
+@import "./cliente/solicitud-limpieza/paso3";
+@import "./cliente/solicitud-limpieza";
+
+///////////VIDRERISTA///////////////
+/* @import "./vidrierista/home"; */
+
+///////////STYLEGUIDE////////////
+/* @import "./styleguide.scss"; */
+ 
+
+
+

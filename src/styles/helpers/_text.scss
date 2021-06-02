@@ -1,0 +1,43 @@
+
+
+@mixin h2 {
+	font: 600  44px/1.13em $font-display; 
+}
+@mixin h1 {
+	font: 700 52px/1.04em $font-display;
+}
+@mixin h3 {
+	font: 700  30px/1.2em $font-display;
+}
+@mixin h4 {
+	font: 700  20px/1.35em $font-display;
+}
+@mixin h5 {
+	font: 600  16px/1.38em $font-display;	
+}
+
+
+h2, .h2 { @include h2; }
+h1, .h1 { @include h1; }
+h3, .h3 { @include h3; }
+h4, .h4 { @include h4; }
+h5, .h5 { @include h5; }
+
+.label, label {
+	font: 400 14px/19px $font; 
+}
+sup, sub {
+	font-size: 0.7em; 
+}
+
+a {
+	text-decoration: none; 
+
+	&.link-text {
+		color: $c-primary; 	
+		&:hover, &:focus, &:active {
+			text-decoration: underline; 
+		}
+	}
+}
+strong	{font-weight: 600; }
